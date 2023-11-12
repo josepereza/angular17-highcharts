@@ -2,11 +2,47 @@
 <button (click)="init()">Init</button>
 <button (click)="toggle()">{{ hidden ? 'Show' : 'Hide' }}</button>
 <button (click)="add()">Add Point!</button>
+
 <div [chart]="chart" *ngIf="!hidden"></div>
 <div [chart]="stockChart" *ngIf="!hidden"></div>
 
+@defer (on viewport; on timer(5s)) {
 <div [chart]="chart2" *ngIf="!hidden"></div>
 
-<div [chart]="chart3" *ngIf="!hidden"></div>
+} @placeholder {
+  <img src="../assets/images/placeholder-3.png" />
+}
 
-<div [chart]="chart4" *ngIf="!hidden"></div>
+
+@defer (on viewport; on timer(5s)) {
+@if (!hidden){
+  <div [chart]="chart3" ></div>
+
+}
+
+} @placeholder {
+  <img src="../assets/images/placeholder-3.png" />
+}
+
+
+@defer (on viewport) {
+@if (!hidden) {
+ <div [chart]="chart4" ></div>
+}
+
+} @placeholder {
+  <img src="../assets/images/placeholder-3.png" />
+}
+
+
+@defer (on timer(4s)) {
+  
+  <div ><h1>(c)Jose perez asensio</h1></div>
+
+  } @placeholder {
+    <img src="../assets/images/placeholder-3.png" />
+  }
+
+
+
+
